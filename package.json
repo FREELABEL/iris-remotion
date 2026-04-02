@@ -1,0 +1,39 @@
+{
+  "name": "iris-hive-ads",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx remotion studio",
+    "build": "npx remotion render HiveAd out/hive-ad.mp4",
+    "build:gif": "npx remotion render HiveAd out/hive-ad.gif",
+    "build:still": "npx remotion still HiveAdThumbnail out/hive-thumbnail.png",
+    "build:intro": "npx remotion render BrandIntro",
+    "build:outro": "npx remotion render BrandOutro",
+    "build:brands": "npm run build:brands:discover && npm run build:brands:beatbox && npm run build:brands:freelabel && npm run build:brands:heyiris && npm run build:brands:emc_radio && npm run build:brands:capital_collective",
+    "build:brands:discover": "npx remotion render BrandIntro out/intros/discover-intro.mp4 --props '{\"brand\":\"discover\"}' && npx remotion render BrandOutro out/outros/discover-outro.mp4 --props '{\"brand\":\"discover\"}'",
+    "build:brands:beatbox": "npx remotion render BrandIntro out/intros/beatbox-intro.mp4 --props '{\"brand\":\"beatbox\"}' && npx remotion render BrandOutro out/outros/beatbox-outro.mp4 --props '{\"brand\":\"beatbox\"}'",
+    "build:brands:freelabel": "npx remotion render BrandIntro out/intros/freelabel-intro.mp4 --props '{\"brand\":\"freelabel\"}' && npx remotion render BrandOutro out/outros/freelabel-outro.mp4 --props '{\"brand\":\"freelabel\"}'",
+    "build:brands:heyiris": "npx remotion render BrandIntro out/intros/heyiris-intro.mp4 --props '{\"brand\":\"heyiris\"}' && npx remotion render BrandOutro out/outros/heyiris-outro.mp4 --props '{\"brand\":\"heyiris\"}'",
+    "build:brands:emc_radio": "npx remotion render BrandIntro out/intros/emc_radio-intro.mp4 --props '{\"brand\":\"emc_radio\"}' && npx remotion render BrandOutro out/outros/emc_radio-outro.mp4 --props '{\"brand\":\"emc_radio\"}'",
+    "build:brands:capital_collective": "npx remotion render BrandIntro out/intros/capital_collective-intro.mp4 --props '{\"brand\":\"capital_collective\"}' && npx remotion render BrandOutro out/outros/capital_collective-outro.mp4 --props '{\"brand\":\"capital_collective\"}'",
+    "build:social": "npx remotion render SocialPost out/social-post.mp4 --audio-bitrate 320k",
+    "build:social:story": "npx remotion render SocialPostStory out/social-post-story.mp4 --audio-bitrate 320k",
+    "build:social:no-zoom": "npx remotion render SocialPostNoZoom out/social-post-no-zoom.mp4 --audio-bitrate 320k",
+    "build:social:still": "npx remotion still SocialPostStill out/social-post.png",
+    "build:social:still:story": "npx remotion still SocialPostStillStory out/social-post-story.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.431",
+    "@remotion/google-fonts": "4.0.431",
+    "@remotion/media": "4.0.431",
+    "@remotion/transitions": "4.0.431",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.431",
+    "typescript": "^5.4.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0"
+  }
+}
