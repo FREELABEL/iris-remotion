@@ -136,6 +136,16 @@ export const CarouselSlideStill = ({
         {/* ── COVER ── */}
         {slide.type === "cover" && (
           <>
+            <Img
+              src={staticFile(config.logoFile ?? "fllogo.png")}
+              style={{
+                width: 280,
+                height: 200,
+                objectFit: "contain",
+                marginBottom: 16,
+                flexShrink: 0,
+              }}
+            />
             {slide.subtitle && (
               <div
                 style={{
@@ -581,6 +591,16 @@ export const CarouselSlideStill = ({
         {/* ── CTA ── */}
         {slide.type === "cta" && (
           <>
+            <Img
+              src={staticFile(config.logoFile ?? "fllogo.png")}
+              style={{
+                width: 240,
+                height: 170,
+                objectFit: "contain",
+                marginBottom: 16,
+                flexShrink: 0,
+              }}
+            />
             {slide.headline && (
               <div
                 style={{
@@ -687,10 +707,11 @@ export const CarouselSlideStill = ({
         <Img
           src={staticFile(config.logoFile ?? "fllogo.png")}
           style={{
-            width: 32,
-            height: 32,
+            width: 90,
+            height: 56,
             objectFit: "contain",
-            opacity: 0.6,
+            opacity: 0.9,
+            flexShrink: 0,
           }}
         />
       </div>
