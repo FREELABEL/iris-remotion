@@ -16,6 +16,7 @@ export const BrandSchema = z.object({
   accentGlow: z.string(),
   bgColor: z.string(),
   textColor: z.string(),
+  mutedColor: z.string().optional(),
   logoFile: z.string().optional(),
 });
 
@@ -83,6 +84,20 @@ export const BRANDS: Record<string, BrandConfig> = {
     accentGlow: "#22d3ee",
     bgColor: "#08080d",
     textColor: "#ffffff",
+  },
+  moody_beauty: {
+    brand: "moody_beauty",
+    brandName: "Moody Beauty",
+    handle: "@moodybeauty",
+    tagline: "Lashes · Brows · Glow",
+    ctaText: "Book Now",
+    ctaUrl: "moodybeauty.com",
+    accentColor: "#A47148",
+    accentGlow: "#C28860",
+    bgColor: "#FBF8F4",
+    textColor: "#3D2A1F",
+    mutedColor: "#8B6F5A",
+    logoFile: "moody-beauty-logo.png",
   },
   capital_collective: {
     brand: "capital_collective",

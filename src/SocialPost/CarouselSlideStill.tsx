@@ -43,6 +43,7 @@ export const CarouselSlideStill = ({
   slideIndex,
 }: CarouselSlideStillProps) => {
   const config: BrandConfig = BRANDS[brand] ?? BRANDS.freelabel;
+  const muted = config.mutedColor ?? NEUTRAL.gray400;
   const slide = slides[slideIndex] ?? slides[0];
   const centered = ["cover", "cta", "quote", "image", "stat"].includes(slide.type);
 
@@ -108,7 +109,7 @@ export const CarouselSlideStill = ({
               borderRadius: 5,
               background: i === slideIndex
                 ? config.accentColor
-                : `${NEUTRAL.white}20`,
+                : `${config.textColor}20`,
               boxShadow: i === slideIndex
                 ? `0 0 10px ${config.accentColor}50`
                 : "none",
@@ -152,7 +153,7 @@ export const CarouselSlideStill = ({
               style={{
                 fontSize: 64,
                 fontWeight: 900,
-                color: NEUTRAL.white,
+                color: config.textColor,
                 letterSpacing: -2,
                 lineHeight: 1.1,
                 maxWidth: 850,
@@ -175,7 +176,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 28,
-                  color: NEUTRAL.gray400,
+                  color: muted,
                   lineHeight: 1.5,
                   maxWidth: 700,
                 }}
@@ -187,7 +188,7 @@ export const CarouselSlideStill = ({
               style={{
                 fontSize: 18,
                 fontWeight: 500,
-                color: NEUTRAL.gray500,
+                color: muted,
                 letterSpacing: 3,
                 marginTop: 32,
                 textTransform: "uppercase",
@@ -251,7 +252,7 @@ export const CarouselSlideStill = ({
                     justifyContent: "center",
                     fontSize: 28,
                     fontWeight: 900,
-                    color: NEUTRAL.white,
+                    color: config.textColor,
                   }}
                 >
                   {slide.number}
@@ -262,7 +263,7 @@ export const CarouselSlideStill = ({
               style={{
                 fontSize: 52,
                 fontWeight: 900,
-                color: NEUTRAL.white,
+                color: config.textColor,
                 letterSpacing: -1,
                 lineHeight: 1.15,
                 maxWidth: "85%",
@@ -285,7 +286,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 30,
-                  color: NEUTRAL.gray300,
+                  color: muted,
                   lineHeight: 1.55,
                   maxWidth: "90%",
                 }}
@@ -339,7 +340,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 22,
-                  color: NEUTRAL.gray400,
+                  color: muted,
                   fontStyle: "italic",
                   lineHeight: 1.4,
                   maxWidth: 700,
@@ -355,7 +356,7 @@ export const CarouselSlideStill = ({
                 style={{
                   fontSize: 36,
                   fontWeight: 800,
-                  color: NEUTRAL.white,
+                  color: config.textColor,
                   lineHeight: 1.2,
                   maxWidth: 750,
                   marginTop: 8,
@@ -391,7 +392,7 @@ export const CarouselSlideStill = ({
                   style={{
                     fontSize: 140,
                     fontWeight: 900,
-                    color: NEUTRAL.white,
+                    color: config.textColor,
                     lineHeight: 1,
                     letterSpacing: -4,
                     textShadow: `0 0 60px ${config.accentColor}30`,
@@ -404,7 +405,7 @@ export const CarouselSlideStill = ({
                     style={{
                       fontSize: 32,
                       fontWeight: 600,
-                      color: NEUTRAL.gray400,
+                      color: muted,
                       marginTop: 8,
                       letterSpacing: 1,
                     }}
@@ -439,7 +440,7 @@ export const CarouselSlideStill = ({
                       style={{
                         fontSize: 72,
                         fontWeight: 900,
-                        color: NEUTRAL.white,
+                        color: config.textColor,
                         lineHeight: 1,
                         textShadow: `0 0 30px ${config.accentColor}25`,
                       }}
@@ -450,7 +451,7 @@ export const CarouselSlideStill = ({
                       style={{
                         fontSize: 20,
                         fontWeight: 600,
-                        color: NEUTRAL.gray400,
+                        color: muted,
                         marginTop: 8,
                         letterSpacing: 2,
                         textTransform: "uppercase",
@@ -467,7 +468,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 26,
-                  color: NEUTRAL.gray400,
+                  color: muted,
                   lineHeight: 1.5,
                   maxWidth: 700,
                   marginTop: 24,
@@ -496,7 +497,7 @@ export const CarouselSlideStill = ({
               style={{
                 fontSize: 40,
                 fontWeight: 600,
-                color: NEUTRAL.white,
+                color: config.textColor,
                 lineHeight: 1.5,
                 maxWidth: "85%",
                 fontStyle: "italic",
@@ -528,7 +529,7 @@ export const CarouselSlideStill = ({
                 style={{
                   fontSize: 46,
                   fontWeight: 900,
-                  color: NEUTRAL.white,
+                  color: config.textColor,
                   letterSpacing: -1,
                   lineHeight: 1.2,
                   marginBottom: 16,
@@ -547,7 +548,7 @@ export const CarouselSlideStill = ({
                   paddingBottom: 14,
                   paddingTop: 6,
                   borderBottom: i < (slide.bullets?.length ?? 0) - 1
-                    ? `1px solid ${NEUTRAL.white}10`
+                    ? `1px solid ${config.textColor}10`
                     : "none",
                   width: "100%",
                 }}
@@ -566,7 +567,7 @@ export const CarouselSlideStill = ({
                   style={{
                     fontSize: 30,
                     fontWeight: 600,
-                    color: NEUTRAL.white,
+                    color: config.textColor,
                     letterSpacing: 0.5,
                   }}
                 >
@@ -585,7 +586,7 @@ export const CarouselSlideStill = ({
                 style={{
                   fontSize: 56,
                   fontWeight: 900,
-                  color: NEUTRAL.white,
+                  color: config.textColor,
                   letterSpacing: -1,
                   lineHeight: 1.15,
                 }}
@@ -608,7 +609,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 26,
-                  color: NEUTRAL.gray400,
+                  color: muted,
                   lineHeight: 1.5,
                   maxWidth: "80%",
                 }}
@@ -620,7 +621,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   background: config.accentColor,
-                  color: NEUTRAL.white,
+                  color: config.textColor,
                   fontSize: 30,
                   fontWeight: 800,
                   padding: "22px 56px",
@@ -637,7 +638,7 @@ export const CarouselSlideStill = ({
               <div
                 style={{
                   fontSize: 20,
-                  color: NEUTRAL.gray500,
+                  color: muted,
                   marginTop: 8,
                   letterSpacing: 1,
                 }}
@@ -677,14 +678,14 @@ export const CarouselSlideStill = ({
           style={{
             fontSize: 18,
             fontWeight: 700,
-            color: NEUTRAL.gray500,
+            color: muted,
             letterSpacing: 2,
           }}
         >
           {config.handle}
         </div>
         <Img
-          src={staticFile("fllogo.png")}
+          src={staticFile(config.logoFile ?? "fllogo.png")}
           style={{
             width: 32,
             height: 32,
